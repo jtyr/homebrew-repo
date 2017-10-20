@@ -1,8 +1,8 @@
 class Pbt < Formula
   desc "Highly configurable prompt decoration for ZSH and Bash written in Python."
   homepage "https://github.com/jtyr/pbt"
-  url "https://github.com/jtyr/pbt/archive/v1.0.9.tar.gz"
-  sha256 "a2eaef5a49ce6b4418ad8f7ff419fc16375c97a9759664350d4bbd4eed113962"
+  url "https://github.com/jtyr/pbt/archive/v1.0.10.tar.gz"
+  sha256 "bd1e312b295acdf38fda083a31ee62fc7ba3bcf5e924d0a7fd9d732f48eb688e"
 
   depends_on :python if MacOS.version <= :snow_leopard
 
