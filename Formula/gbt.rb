@@ -5,7 +5,7 @@ class Gbt < Formula
   homepage "https://github.com/jtyr/gbt"
   url "https://github.com/jtyr/gbt.git",
     :tag => "v1.0.0",
-    :revision => "2d36a5aeac9b8cf9fb2a9001022d364489634205"
+    :revision => "aca4c68b98f3b9a747ed719143fdf6a4bb02f489"
   head "https://github.com/jtyr/gbt.git"
 
   depends_on "go" => :build
