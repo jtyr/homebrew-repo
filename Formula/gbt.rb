@@ -14,7 +14,7 @@ class Gbt < Formula
     ENV["GOPATH"] = buildpath
 
     contents = buildpath.children - [buildpath/".brew_home"]
-    (buildpath/"src/github.com/hashicorp/vault").install contents
+    (buildpath/"src/github.com/jtyr/gbt").install contents
 
     ENV.prepend_create_path "PATH", buildpath/"bin"
 
