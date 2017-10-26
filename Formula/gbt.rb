@@ -13,11 +13,6 @@ class Gbt < Formula
   def install
     ENV["GOPATH"] = buildpath
 
-    contents = buildpath.children - [buildpath/".brew_home"]
-    (buildpath/"src/github.com/jtyr/gbt").install contents
-
-    ENV.prepend_create_path "PATH", buildpath/"bin"
-
     Language::Go.stage_deps resources, buildpath/"src"
 
     cd "src/github.com/jtyr/gbt" do
