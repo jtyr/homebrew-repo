@@ -21,9 +21,7 @@ class Gbt < Formula
     Language::Go.stage_deps resources, buildpath/"src"
 
     cd "src/github.com/jtyr/gbt" do
-      system "go", "build"
-      bin.install "bin/gbt"
-      prefix.install_metafiles
+      system "go", "build", "-o", bin/"gbt"
     end
   end
 
