@@ -12,6 +12,7 @@ class Gbt < Formula
 
   def install
     ENV["GOPATH"] = buildpath
+    ENV.prepend_create_path "PATH", buildpath/"bin"
 
     Language::Go.stage_deps resources, buildpath/"src"
 
