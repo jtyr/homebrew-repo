@@ -7,6 +7,7 @@ class Gbt < Formula
     :tag => "v1.0.0",
     :revision => "aca4c68b98f3b9a747ed719143fdf6a4bb02f489"
   head "https://github.com/jtyr/gbt.git"
+  revision 1
 
   depends_on "go" => :build
 
