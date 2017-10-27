@@ -22,6 +22,10 @@ class Gbt < Formula
 
     cd "src/github.com/jtyr/gbt" do
       system "go", "build", "-o", bin/"gbt"
+      pkgshare.install Dir["sources"]
+      pkgshare.install Dir["themes"]
+      man1.install "README.md"
+      man1.install "LICENSE"
     end
   end
 
