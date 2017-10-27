@@ -24,8 +24,8 @@ class Gbt < Formula
       system "go", "build", "-o", bin/"gbt"
       pkgshare.install Dir["sources"]
       pkgshare.install Dir["themes"]
-      man1.install "README.md"
-      man1.install "LICENSE"
+      doc.install "README.md"
+      doc.install "LICENSE"
     end
   end
 
