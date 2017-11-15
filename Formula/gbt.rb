@@ -1,36 +1,20 @@
-require "language/go"
-
 class Gbt < Formula
-  desc "Highly configurable prompt decoration for ZSH and Bash written in Go."
+  desc "Highly configurable prompt builder for Bash and ZSH written in Go."
   homepage "https://github.com/jtyr/gbt"
-  url "https://github.com/jtyr/gbt.git",
-    :tag => "v1.0.0",
-    :revision => "aca4c68b98f3b9a747ed719143fdf6a4bb02f489"
-  head "https://github.com/jtyr/gbt.git"
+  version "1.1.0"
   revision 1
-
-  depends_on "go" => :build
+  url "https://github.com/jtyr/gbt/releases/download/v1.1.0/gbt-1.1.0-darwin-amd64.tar.gz"
+  sha256 "1456bc970d11061b98255353e3db4918470f1446790326e9db4089cb20e3b067"
 
   def install
-    ENV["GOPATH"] = buildpath
-
-    contents = buildpath.children - [buildpath/".brew_home"]
-    (buildpath/"src/github.com/jtyr/gbt").install contents
-
-    ENV.prepend_create_path "PATH", buildpath/"bin"
-
-    Language::Go.stage_deps resources, buildpath/"src"
-
-    cd "src/github.com/jtyr/gbt" do
-      system "go", "build", "-o", bin/"gbt"
-      pkgshare.install Dir["sources"]
-      pkgshare.install Dir["themes"]
-      doc.install "README.md"
-      doc.install "LICENSE"
-    end
+    bin.install "gbt"
+    doc.install "README.md"
+    doc.install "LICENSE"
+    pkgshare.install Dir["sources"]
+    pkgshare.install Dir["themes"]
   end
 
   test do
-    system bin/"gbt", "-version"
+    system "gbt", "-version"
   end
 end
