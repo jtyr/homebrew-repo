@@ -16,7 +16,7 @@ brew tap jtyr/repo
 Then you can install packages like this:
 
 ```shell
-brew install pbt
+brew install gbt
 ```
 
 
