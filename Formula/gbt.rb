@@ -2,9 +2,9 @@ class Gbt < Formula
   desc "Highly configurable prompt builder for Bash and ZSH written in Go."
   homepage "https://github.com/jtyr/gbt"
   version "1.2.0"
-  revision 1
+  revision 2
   url "https://github.com/jtyr/gbt/releases/download/v1.2.0/gbt-1.2.0-darwin-amd64.tar.gz"
-  sha256 "59b51d8da2ef14debf604edcb3b1752c46ed5247e7154ad07bd3aa8465e2e1de"
+  sha256 "6b626d4da6344d6db36647d44d505faf722b755543c0882f78a2b28a00b05d28"
 
   def install
     bin.install "gbt"
