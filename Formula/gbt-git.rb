@@ -1,8 +1,8 @@
 class GbtGit < Formula
   desc "Highly configurable prompt builder for Bash and ZSH written in Go."
   homepage "https://github.com/jtyr/gbt"
-  revision 1
-  head "https://github.com/jtyr/gbt.git"
+  revision 2
+  head "https://github.com/jtyr/gbt.git", :branch => "main"
   sha256 ""
   conflicts_with "gbt", :because => "because only one GBT can be installed"
   depends_on "go" => :build
